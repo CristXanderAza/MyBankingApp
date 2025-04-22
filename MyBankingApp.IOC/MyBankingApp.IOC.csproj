@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyBankingApp.Application\MyBankingApp.Application.csproj" />
+    <ProjectReference Include="..\MyBankingApp.Infraestructure\MyBankingApp.Infraestructure.csproj" />
+    <ProjectReference Include="..\MyBankingApp.Persistence\MyBankingApp.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

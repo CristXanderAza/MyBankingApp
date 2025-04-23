@@ -1,4 +1,5 @@
 ﻿using MyBankingApp.Domain.Base;
+using MyBankingApp.Domain.Entities.Loans;
 using MyBankingApp.Domain.Entities.Transactions;
 using MyBankingApp.Domain.Entities.Users;
 
@@ -12,6 +13,17 @@ namespace MyBankingApp.Domain.Entities.Accounts
         public virtual Customer Customer { get; protected set; }
         public virtual ICollection<BankTransaction> Ingresses { get; protected set; }
         public virtual ICollection<BankTransaction> Egresses { get; protected set; }
+        public virtual ICollection<Loan> Loans { get; protected set; } = new List<Loan>();
+        public virtual ICollection<BankTransaction> Transactions
+        {
+            get
+            {
+                var transactions = new List<BankTransaction>();
+                transactions.AddRange(Ingresses);
+                transactions.AddRange(Egresses);
+                return transactions;
+            }
+        }
 
         protected AccountBase(Guid customerId)
         {

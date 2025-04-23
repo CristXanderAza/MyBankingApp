@@ -9,5 +9,7 @@ namespace MyBankingApp.Domain.Entities.Transactions
         Payment = 4,
         Refund = 5,
         LoanPayment = 6,
+        CreditCard = 7,
+        CreditCardPurchases = 8,
     }
 }

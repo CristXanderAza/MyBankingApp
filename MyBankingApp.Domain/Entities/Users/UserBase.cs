@@ -10,7 +10,7 @@ namespace MyBankingApp.Domain.Entities.Users
         public string PhoneNumber { get; set; }
         public Credential Credential { get; set; }
         public string Email => Credential.Email;
-        protected UserBase(string firstName, string LastName, string PhoneNumber, string email, Credential credential)
+        protected UserBase(string firstName, string LastName, string PhoneNumber, Credential credential)
         {
             UserID = Guid.NewGuid();
             FirstName = firstName;

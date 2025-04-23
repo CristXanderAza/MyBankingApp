@@ -26,6 +26,4 @@ namespace MyBankingApp.Domain.Entities.Accounts
             }
         }
     }
-    {
-    }
 }

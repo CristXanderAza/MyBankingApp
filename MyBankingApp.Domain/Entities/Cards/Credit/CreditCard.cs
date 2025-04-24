@@ -4,9 +4,9 @@ namespace MyBankingApp.Domain.Entities.Cards.Credit
 {
     public class CreditCard : CardBase
     {
-        public decimal CreditLimit { get; private set; }
-        public decimal CurrentDebt { get; private set; }
-        public decimal InterestRate { get; private set; }
+        public decimal CreditLimit { get;  set; }
+        public decimal CurrentDebt { get;  set; }
+        public decimal InterestRate { get;  set; }
 
         public virtual ICollection<CreditCardTransaction> Transactions { get; private set; }
 

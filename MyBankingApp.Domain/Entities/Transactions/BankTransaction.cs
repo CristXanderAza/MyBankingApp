@@ -8,6 +8,7 @@ namespace MyBankingApp.Domain.Entities.Transactions
         public DateTime Date { get; protected set; }
         public decimal Amount { get; protected set; }
         public string Description { get; protected set; }
+        public TransactionStatus Status { get; protected set; } = TransactionStatus.Pending;
         public Guid? FromAccountID { get; protected set; }
         public Guid? ToAccountID { get; protected set; }
         public TransactionTypes TransactionType { get; protected set; }

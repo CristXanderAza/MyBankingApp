@@ -15,6 +15,7 @@ namespace MyBankingApp.Domain.Entities.Accounts
             => (amount > 0);
         public override bool CanWithdraw(decimal amount)
             => (amount > 0 && amount <= Balance + OverdraftLimit);
+
         public Result<decimal> SetOverdraftLimit(decimal limit)
         {
             if (limit < 0)

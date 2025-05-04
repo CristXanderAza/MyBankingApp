@@ -11,9 +11,7 @@ namespace MyBankingApp.Domain.Entities.Loans
         public decimal InterestRate { get; private set; }
         public int TermInMonths { get; private set; }
         public DateTime StartDate { get; private set; }
-
         public decimal OutstandingBalance { get; private set; }
-
         public virtual AccountBase Account { get; private set; }
         public virtual ICollection<LoanPayment> Payments { get; private set; } = new List<LoanPayment>();
 

@@ -5,11 +5,13 @@ namespace MyBankingApp.Domain.Entities.Accounts
     {
         public decimal InterestRate { get; private set; }
         public DateTime LastInterestApplied { get; private set; }
-        public SavingsAccount(Guid customerId, decimal interestRate) : base(customerId)
+
+        public SavingsAccount(Guid customerId, decimal interestRate) : base(customerId, AccountType.Savings)
         {
             InterestRate = interestRate;
             LastInterestApplied = DateTime.UtcNow;
         }
+
         public override bool CanDeposit(decimal amount)
             => (amount > 0);
         

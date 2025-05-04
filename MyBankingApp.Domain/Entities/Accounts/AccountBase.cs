@@ -8,6 +8,7 @@ namespace MyBankingApp.Domain.Entities.Accounts
     public abstract class AccountBase : AuditEntity
     {
         public Guid AccountID { get; protected set; }
+        public AccountType AccountType { get; protected set; }
         public decimal Balance { get; protected set; }
         public Guid CustomerID { get; protected set; }
         public AccountStatus Status { get; set; }
@@ -26,10 +27,11 @@ namespace MyBankingApp.Domain.Entities.Accounts
             }
         }
 
-        protected AccountBase(Guid customerId)
+        protected AccountBase(Guid customerId, AccountType accountType)
         {
             AccountID = Guid.NewGuid();
             CustomerID = customerId;
+            AccountType = accountType;
         }
 
         public abstract bool CanDeposit(decimal amount);

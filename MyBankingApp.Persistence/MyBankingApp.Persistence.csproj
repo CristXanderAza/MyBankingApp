@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Base\" />
+    <Folder Include="Configuration\Accounts\" />
+    <Folder Include="Configuration\BankingRequests\" />
+    <Folder Include="Configuration\Cards\" />
+    <Folder Include="Configuration\Loans\" />
+    <Folder Include="Configuration\Transactions\" />
+    <Folder Include="Configuration\Users\" />
+    <Folder Include="Repositories\Accounts\" />
+    <Folder Include="Repositories\BankingRequests\" />
+    <Folder Include="Repositories\Cards\" />
+    <Folder Include="Repositories\Loans\" />
+    <Folder Include="Repositories\Transactions\" />
+    <Folder Include="Repositories\Users\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MyBankingApp.Application\MyBankingApp.Application.csproj" />
   </ItemGroup>
 

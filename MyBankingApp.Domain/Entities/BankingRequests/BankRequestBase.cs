@@ -8,7 +8,8 @@ namespace MyBankingApp.Domain.Entities.BankingRequests
         public Guid CustomerId { get; protected set; }
         public DateTime RequestedAt { get; protected set; }
         public BankRequestStatus Status { get; protected set; }
-
+        public abstract string RequestType { get; }
+        public string? RequestDetails { get;  set; }
         public string? AdminComments { get; protected set; }
 
         protected BankRequestBase(Guid customerId)
@@ -19,7 +20,7 @@ namespace MyBankingApp.Domain.Entities.BankingRequests
             Status = BankRequestStatus.Pending;
         }
 
-        public void Approve(string? comments = null)
+        public virtual void Approve(string? comments = null)
         {
             Status = BankRequestStatus.Approved;
             AdminComments = comments;

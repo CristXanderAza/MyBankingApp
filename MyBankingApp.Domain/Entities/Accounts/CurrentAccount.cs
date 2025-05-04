@@ -6,7 +6,7 @@ namespace MyBankingApp.Domain.Entities.Accounts
     {
         public decimal OverdraftLimit { get; private set; }
 
-        public CurrentAccount(Guid customerId, decimal overdraftLimit) : base(customerId)
+        public CurrentAccount(Guid customerId, decimal overdraftLimit) : base(customerId, AccountType.Current)
         {
             OverdraftLimit = overdraftLimit;
         }

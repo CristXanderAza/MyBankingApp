@@ -14,6 +14,4 @@ namespace MyBankingApp.Domain.Entities.Transactions.CreditCardTransactions
             UsedIn = usedIn;
         }
     }
-    {
-    }
 }

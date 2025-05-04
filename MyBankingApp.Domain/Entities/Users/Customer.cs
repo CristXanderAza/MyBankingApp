@@ -16,6 +16,6 @@ namespace MyBankingApp.Domain.Entities.Users
         }
 
         private Customer(string firstName, string lastName, string phoneNumber, string email, Credential credential)
-            : base(firstName, lastName, phoneNumber, email, credential) {}
+            : base(firstName, lastName, phoneNumber, credential) {}
     }
 }

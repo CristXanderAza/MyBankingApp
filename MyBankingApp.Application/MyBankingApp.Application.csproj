@@ -7,7 +7,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+    <PackageReference Include="MediatR" Version="12.5.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MyBankingApp.Domain\MyBankingApp.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AppEvents\" />
+    <Folder Include="Commands\Accounts\" />
+    <Folder Include="Commands\Loans\" />
+    <Folder Include="Commands\Cards\" />
+    <Folder Include="Commands\BankingRequests\" />
+    <Folder Include="Commands\Transactions\" />
+    <Folder Include="Commands\Users\" />
+    <Folder Include="DTOs\BankingRequests\" />
+    <Folder Include="DTOs\Cards\" />
+    <Folder Include="DTOs\Loans\" />
+    <Folder Include="DTOs\Transactions\" />
+    <Folder Include="DTOs\Users\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Wrappers\" />
+    <Folder Include="Queries\BankingRequests\" />
+    <Folder Include="Queries\Cards\" />
+    <Folder Include="Queries\Loans\" />
+    <Folder Include="Queries\Transactions\" />
+    <Folder Include="Queries\Users\" />
   </ItemGroup>
 
 </Project>

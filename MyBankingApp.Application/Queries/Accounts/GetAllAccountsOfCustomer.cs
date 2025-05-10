@@ -28,7 +28,6 @@ namespace MyBankingApp.Application.Queries.Accounts
             {
                 return Enumerable.Empty<AccountDto>();
             }
-
             IEnumerable<AccountDto> accountDtos = accounts.Select(a => _mapper.Map<AccountDto>(a));
             return accountDtos;
         }

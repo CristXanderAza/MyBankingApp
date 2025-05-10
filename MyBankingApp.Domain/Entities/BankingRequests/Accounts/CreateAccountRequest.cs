@@ -6,8 +6,11 @@ namespace MyBankingApp.Domain.Entities.BankingRequests.Accounts
     {
         public AccountType AccountType { get;  set; }
         public decimal InitialDeposit { get;  set; }
-        public decimal? InterestRate { get; set; }
-        public decimal? OverdraftLimit { get; set; }
+        public decimal? RequestedInterestRate { get; set; }
+        public decimal? RequestedOverdraftLimit { get; set; }
+        public decimal? ApprovedInterestRate { get; set; }
+        public decimal? ApprovedOverdraftLimit { get; set; }
+
         public override string RequestType => "CreateAccount";
         public CreateAccountRequest(Guid customerId, AccountType accountType, decimal initialDeposit)
             : base(customerId)
@@ -23,15 +26,10 @@ namespace MyBankingApp.Domain.Entities.BankingRequests.Accounts
 
         public void Approve(decimal interes, decimal limit, string? comments = null)
         {
-            if (AccountType == AccountType.Savings)
-            {
-                InterestRate = interes;
-            }
-            else if (AccountType == AccountType.Current)
-            {
-                OverdraftLimit = limit;
-            }
 
+            ApprovedInterestRate = interes;
+            ApprovedOverdraftLimit = limit;
+            
             base.Approve(comments);
         }
     }

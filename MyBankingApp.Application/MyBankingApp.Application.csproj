@@ -12,6 +12,7 @@
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
     <PackageReference Include="MediatR" Version="12.5.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,18 +20,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AppEvents\" />
-    <Folder Include="Commands\Accounts\" />
+    <Folder Include="AppEvents\Accounts\" />
+    <Folder Include="AppEvents\Cards\" />
+    <Folder Include="AppEvents\Loans\" />
+    <Folder Include="AppEvents\Transactions\" />
     <Folder Include="Commands\Loans\" />
     <Folder Include="Commands\Cards\" />
     <Folder Include="Commands\BankingRequests\" />
     <Folder Include="Commands\Transactions\" />
     <Folder Include="Commands\Users\" />
-    <Folder Include="DTOs\BankingRequests\" />
     <Folder Include="DTOs\Cards\" />
     <Folder Include="DTOs\Loans\" />
     <Folder Include="DTOs\Transactions\" />
     <Folder Include="DTOs\Users\" />
+    <Folder Include="Features\Cards\" />
+    <Folder Include="Features\Loans\" />
+    <Folder Include="Features\Transactions\" />
+    <Folder Include="Features\Users\" />
     <Folder Include="Mappers\" />
     <Folder Include="Wrappers\" />
     <Folder Include="Queries\BankingRequests\" />

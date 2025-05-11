@@ -13,7 +13,7 @@ namespace MyBankingApp.Domain.Entities.Transactions
         public Guid? ToAccountID { get; set; }
         public TransactionTypes TransactionType { get; set; }
 
-        public BankTransaction(TransactionTypes type, Guid accountId, decimal amount, string description, Guid? toAcountId)
+        public BankTransaction(TransactionTypes type, Guid? fromAccountId, decimal amount, string description, Guid? toAcountId)
         {
             TransactionType = type;
             TransactionID = Guid.NewGuid();
